@@ -3,7 +3,7 @@ my_public_ip = my_public_ip()
 
 
 nn = private_recipe_ip("hops", "nn") + ":#{node['hops']['nn']['port']}"
-elastic = private_recipe_ip("elastic", "default") + ":#{node['elastic']['port']}"
+elastic = all_elastic_ips_ports_str()
 
 
 ndb_connectstring()
